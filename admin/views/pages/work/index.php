@@ -1,0 +1,59 @@
+<?php
+
+$feedback = loadModel('work');
+$id = $_SESSION['user_id'];
+$list=$feedback->list_work($page,$id);
+
+require_once 'views/header.php';
+?>
+<section class="clearfix maincontent py-3">
+	<div class="w-100 container " >
+		<div class="card">
+			<div class="card-header">
+				<div class="row">
+					<div class="col-md-6"><strong class="text-danger">Danh sách tư vấn</strong></div>
+					<div class="col-md-6 text-right">
+						<?php if ($_SESSION['Access']!=1) {
+							echo "Bạn k có quyền sửa";
+						}else{ ?>
+							<a class="btb btn-danger btn-sm" href="index.php?option=feedback&cat=trash"><i class="fa fa-trash-o"></i> Trash</a>
+						<?php } ?>
+					</div> 
+				</div>
+			</div>
+			<div  class="card-block p-3">
+				<?php if(has_flash('thongbao')):  ?>
+					<div class="alert alert-danger" > <?php echo get_flash('thongbao') ; ?> </div>
+				<?php endif; ?>
+
+				<table id="myTable" class="table table-inverse table-hover table-bfeedbacked">
+					<thead>
+						<tr>
+							<th class="text-center" style="width:100px;">ID</th>
+							<th class="text-center" style="width:300px;height:10px;">Tên công việc</th>
+							<th class="text-center">Thời gian</th>
+							<th class="text-center">UserId</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach($list as $row):?>
+							<tr>			
+								<td class="text-center text-danger">0<?php echo $row['ID']  ?></td>
+								<td class="text-center"><h6><?php echo $row['Name']  ?></td>
+									<td class="text-center"><?php echo $row['TimeWork']  ?></td>
+									<td class="text-center"><?php echo $row['UserId']  ?></td>
+								</tr>
+							<?php endforeach; ?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<style type="text/css">
+		
+		a:hover{
+			color: red;
+			text-decoration: none;
+		}
+	</style>
