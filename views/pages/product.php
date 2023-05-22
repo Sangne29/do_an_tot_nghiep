@@ -160,7 +160,7 @@ $total = $product->product_all_count();
 							<ul class="store-pages">
 								<li><span class="text-uppercase">Page:</span></li>
 							<?php 
-						echo $pt->pageL`in`k($total,$limit,'index.php?option=product');
+						echo $pt->pageLink($total,$limit,'index.php?option=product');
 					?>
 								<li><a href="#"><i class="fa fa-caret-right"></i></a></li>
 							</ul>

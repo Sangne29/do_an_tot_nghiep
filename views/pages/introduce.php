@@ -25,48 +25,8 @@ $list1 = $post->post_list1();
 	<!-- /BREADCRUMB -->
 
 <!-- section -->
-	<div class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-					<div class="col-md-12">
-						<div class="order-summary clearfix">
-							<div class="section-title">
-								<h3 class="title">All POST</h3>
-							</div>
-							<table class="shopping-cart-table table">
-								<thead>
-									<tr>
-										<th style="width:15%;">Post Image</th>
-										<th style="width:60%;">Post Title</th>
-										<th class="text-center">Create Update</th>		
-									</tr>
-								</thead>
-								<tbody>
-									 <?php foreach($list1 as $r): ?>
-									<tr>
-										<td ><img style="width: 150px;" src="public/img/post/<?php echo $r['img']?>" alt=""></td>
-										<td class="details">
-											<a href="index.php?option=post&id=<?php  echo $r['slug']; ?>"><?php echo $r['title']?></a>
-											<ul >
-												<li><span><?php echo substr($r['detail'],0,351); ?></span></li>
-												
-											</ul>
-										</td>
-										<td class="qty text-center"><p class="" type="number" ></p>2019-32-45 </td>
-									</tr>
-									<?php endforeach; ?>
-								</tbody>
-							</table>
-							
-						</div>
-
-					</div>
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
+	<div>
+		html
 	</div>
 	<!-- /section -->
 <section>
