@@ -15,4 +15,7 @@ class work extends Database
 		WHERE UserId = '$id'";
 		return $this->QueryAll($sql);
 	}
+	function add_work($user_id , $name , $timework ){
+		$sql = "INSERT INTO $this->table('Name , TimeWork, UserId') VALUES('$name' , '$timework' , $user_id )";
+	}
 }

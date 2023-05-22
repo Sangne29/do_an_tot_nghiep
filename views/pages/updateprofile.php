@@ -1,4 +1,4 @@
-<?php require_once('views/header.php'); ?>
+<?php require_once('views/header.php'); require_once ('config.php');?>
 
 <div id="navigation">
 		<div class="container">
@@ -46,19 +46,32 @@ if (isset($_POST['confirm']))
 	$email = $_POST['email'];
 	$pnumber = $_POST['phonenumber'];
 	$gender = $_POST['gender'];
-	echo $cid;
-	echo $un;
+	$password_new = $_POST['password'];
+	// echo $cid;
+	// echo $fullname;
+	$password_new = sha1($password_new);
+	// echo $password_new;
 	if (empty($fullname) or empty($email) or empty($pnumber)) {?>
 	<script>alert('Bạn chưa nhập đủ thông tin cần sửa')</script>
 	<?php 
 	}
 	else
 	{
-		$sql = mysqli_query($conn, "UPDATE `eshop`.`latnt_user` 
-									set `fullname` = '$fullname', `email` = '$email', `gender` = $gender, `phone` = '$pnumber'
+		$servername  = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "test";
+		$conn = new mysqli($servername, $username, $password,$dbname);
+	// echo	 $conn;
+
+	if ($conn->connect_error) {
+		die("Connection Failed: ".$conn->connect_error);
+	}
+		$sql = mysqli_query($conn, "UPDATE `test`.`latnt_user` 
+									set `fullname` = '$fullname', `email` = '$email', `gender` = $gender, `phone` = '$pnumber', `password` = '$password_new'
 									WHERE user_id = '$cid'");
 		?>
-		<script>alert('Cập nhật thông tin thành công')</script>
+		<!-- <script>alert('Cập nhật thông tin thành công')</script> -->
 	<?php  
 	}
 
@@ -92,6 +105,9 @@ if (isset($_POST['confirm']))
 					</select>
 						
 			  </div>
+			  <div class="form-group">
+                <input class="input" type="password" name="password" placeholder="password">     
+              </div>
                 <button type="submit"   name="confirm"  class="primary-btn">&nbsp;&nbsp;Confirm Change&nbsp;&nbsp;</button>
             </div>
           </div>

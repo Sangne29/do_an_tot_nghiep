@@ -44,7 +44,7 @@ $row= $user->list_user_cuss($id);
 			<tbody>
 				<tr>
 					<td> Full Name: </td>
-					<td><input value=><?php echo $row['fullname'] ?> </input></td>
+					<td><?php echo  $row['fullname'] ?> </td>
 				</tr>
 				<tr>
 					<td> Email: </td>
@@ -65,6 +65,7 @@ $row= $user->list_user_cuss($id);
 					<td><?php echo $row['created_at'] ?> </td>
 				</tr>
 			</tbody>
+			<a href="index.php?option=updateprofile"> update profile</a>
 		</table>
 	</div>
 </div>

@@ -11,14 +11,39 @@ require_once 'views/header.php';
 		<div class="card">
 			<div class="card-header">
 				<div class="row">
-					<div class="col-md-6"><strong class="text-danger">Danh sách tư vấn</strong></div>
+					<div class="col-md-6"><strong class="text-danger">Xem lịch làm việc</strong></div>
 					<div class="col-md-6 text-right">
 						<?php if ($_SESSION['Access']!=1) {
 							echo "Bạn k có quyền sửa";
 						}else{ ?>
-							<a class="btb btn-danger btn-sm" href="index.php?option=feedback&cat=trash"><i class="fa fa-trash-o"></i> Trash</a>
+							<a class="btb btn-success btn-sm" href="index.php?option=feedback&cat=trash" data-toggle="modal" data-target="#exampleModal"></i> Add</a>
+							<!-- <a class="btb btn-danger btn-sm" href="index.php?option=feedback&cat=trash"><i class="fa fa-trash-o"></i> Trash</a> -->
+							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<form action="views/pages/work/add_work.php" method="POST">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Thêm công việc</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<input type="text" name="id" value='<?php echo $id; ?>' style='display:none;'>
+												<input type="text" class="form-control" id="name" name="name" placeholder="Name:">
+												<input type="text"  class="form-control mt-3" id="timework" name="timework" placeholder="Time Work:">
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+												<button  class="btn btn-primary" id="btnSaveWork" type="submit">Save</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
 						<?php } ?>
 					</div> 
+					
 				</div>
 			</div>
 			<div  class="card-block p-3">
