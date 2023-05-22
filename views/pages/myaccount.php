@@ -44,7 +44,11 @@ $row= $user->list_user_cuss($id);
 			<tbody>
 				<tr>
 					<td> Full Name: </td>
+<<<<<<< HEAD
 					<td><?php echo  $row['fullname'] ?> </td>
+=======
+					<td><input <?php echo $row['fullname'] ?> </input></td>
+>>>>>>> 04d0de2ed57e2583d8b1d70b3fc4a4c583d512a9
 				</tr>
 				<tr>
 					<td> Email: </td>
