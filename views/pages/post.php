@@ -54,7 +54,7 @@ $list1 = $post->post_list1();
 												
 											</ul>
 										</td>
-										<td class="qty text-center"><p class="" type="number" ></p>2019-32-45 </td>
+										<td class="qty text-center"><p class="" type="number" ></p><?php echo $r['created_at'];?> </td>
 									</tr>
 									<?php endforeach; ?>
 								</tbody>

@@ -58,6 +58,17 @@ INSERT INTO `latnt_category` (`id`, `name`, `slug`, `parentid`, `orders`, `metak
 -- Cấu trúc bảng cho bảng `latnt_comment`
 --
 
+CREATE TABLE `latnt_review` (
+  `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `review` longtext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `createda_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `product_id` int(11) NOT NULL,
+  `rating` int(11) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
 CREATE TABLE `latnt_comment` (
   `id` int(6) UNSIGNED NOT NULL,
   `name` varchar(30) NOT NULL,

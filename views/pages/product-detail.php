@@ -13,8 +13,13 @@
 <?php 
 $product=loadModel('product');
 $category=loadModel('category');
+$review = loadModel('review');
+
 $slug=$_REQUEST['id'];
 $row=$product->product_rowslug($slug);
+
+$review_by_product = $review->get_review($row['id']);
+// echo $review_by_product['review'];
 $title=$row['name'];
 $list_catid=$category->category_listid($row['catid']);
 $list_other=$product->product_orther($list_catid,$row['id'],4);
@@ -121,59 +126,43 @@ $list_other=$product->product_orther($list_catid,$row['id'],4);
 									<div class="row">
 										<div class="col-md-6">
 											<div class="product-reviews">
-												<div class="single-review">
-													<div class="review-heading">
-														<div><a href="#"><i class="fa fa-user-o"></i> John</a></div>
-														<div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>
-														<div class="review-rating pull-right">
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star-o empty"></i>
-														</div>
-													</div>
-													<div class="review-body">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute
-															irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													</div>
-												</div>
 
-												<div class="single-review">
-													<div class="review-heading">
-														<div><a href="#"><i class="fa fa-user-o"></i> John</a></div>
-														<div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>
-														<div class="review-rating pull-right">
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star-o empty"></i>
-														</div>
-													</div>
-													<div class="review-body">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute
-															irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													</div>
-												</div>
+											<?php 
+												if($review_by_product){
+													$cnt = 1;
+													foreach($review_by_product as $rev){
+													echo '<div class="single-review">
+															<div class="review-heading">
+																<div><a href="#"><i class="fa fa-user-o"></i> '.$rev['name'].'</a></div>
+																<div><a href="#"><i class="fa fa-clock-o"></i>'.$rev['createda_at'].'</a></div>
+																<div class="review-rating pull-right" id="review-rating-'.$cnt.'" >
+																	
+																</div>
+																<script>
+																for(let i =0 ; i < '.$rev['rating'].' ; i++){
+																	document.getElementById("review-rating-'.$cnt.'").innerHTML += `<i class="fa fa-star"></i>`;
 
-												<div class="single-review">
-													<div class="review-heading">
-														<div><a href="#"><i class="fa fa-user-o"></i> John</a></div>
-														<div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>
-														<div class="review-rating pull-right">
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star-o empty"></i>
-														</div>
-													</div>
-													<div class="review-body">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute
-															irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													</div>
-												</div>
+																}
+																for(let i =0 ; i < 5- '.$rev['rating'].' ; i++){
+																	document.getElementById("review-rating-'.$cnt.'").innerHTML += `<i class="fa fa-star-o empty"></i>`;
+
+																}
+																</script>
+															</div>
+															<div class="review-body">
+																<p>'.$rev['review'].'</p>
+															</div>
+														</div>';
+														$cnt = $cnt + 1 ;
+													}
+												}else {
+													echo "0 Review";
+												}
+											?>
+
+												
+
+												
 
 												<ul class="reviews-pages">
 													<li class="active">1</li>
@@ -186,15 +175,18 @@ $list_other=$product->product_orther($list_catid,$row['id'],4);
 										<div class="col-md-6">
 											<h4 class="text-uppercase">Write Your Review</h4>
 											<p>Your email address will not be published.</p>
-											<form class="review-form">
+											<form class="review-form" method="POST" action="views/pages/review.php">
 												<div class="form-group">
-													<input class="input" type="text" placeholder="Your Name" />
+													<input class="input" type="text" name='name' placeholder="Your Name" />
+												</div>
+												<div class="form-group" style='display:none;'>
+													<input class="input" type="text" name='product_id' value="<?php echo $row['id'];?>" />
 												</div>
 												<div class="form-group">
-													<input class="input" type="email" placeholder="Email Address" />
+													<input class="input" type="email" name='email' placeholder="Email Address" />
 												</div>
 												<div class="form-group">
-													<textarea class="input" placeholder="Your review"></textarea>
+													<textarea class="input" name='review' placeholder="Your review"></textarea>
 												</div>
 												<div class="form-group">
 													<div class="input-rating">
