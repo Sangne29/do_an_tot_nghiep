@@ -44,7 +44,7 @@ $row= $user->list_user_cuss($id);
 			<tbody>
 				<tr>
 					<td> Full Name: </td>
-					<td><input value=><?php echo $row['fullname'] ?> </input></td>
+					<td><input <?php echo $row['fullname'] ?> </input></td>
 				</tr>
 				<tr>
 					<td> Email: </td>

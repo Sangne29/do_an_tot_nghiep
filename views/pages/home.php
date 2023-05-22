@@ -34,33 +34,33 @@ $list_product_sale=$product->product_list(1);
 				<!-- banner -->
 				<div class="col-md-4 col-sm-6">
 					<div class="banner banner-1" >
-						<img src="https://images.baodantoc.vn/uploads/2023/Th%C3%A1ng%205/Ng%C3%A0y_21/TRUNG/Covid.jpg" alt="">
+						<img src="../php_Eshop_3/public/img/post/fitfood-vn-hop-tac-cung-h-h-nutrition-ra-mat-goi-tu-van-dinh-duong-chuyen-sau.jpg" alt="">
 						
 					</div>
-					<a href="https://baodantoc.vn/ngay-205-ca-nuoc-co-1190-ca-mac-moi-covid-19-va-co-1-benh-nhan-tu-vong-1684588704325.htm">Covid 19</a>
-					<p>Bộ Y tế phát động cuộc thi nhảy cover "Vì một Việt Nam vững vàng và khỏe mạnh" trên Tiktok.</p>
+					<a href="../php_Eshop_3/index.php?option=post&id=fitfood-vn-hop-tac-cung-h-h-nutrition-ra-mat-goi-tu-van-dinh-duong-chuyen-sau" style="text-align: center;">FITFOOD VN HỢP TÁC CÙNG H&H NUTRITION RA MẮT GÓI TƯ VẤN DINH DƯỠNG CHUYÊN SÂU.</a>
+			
 				</div>
 				<!-- /banner -->
 
 				<!-- banner -->
 				<div class="col-md-4 col-sm-6">
 					<div class="banner banner-1" >
-						<img src="https://api.nongthonviet.com.vn/media/2022/09/26/63315f6ea0afc3411fadc362_1664178978-754-thumbnail-width740height555.jpg" alt="">
+						<img src="../php_Eshop_3/public/img/post/tam-quan-trong-cua-suc-khoe.jpg" alt="">
 						
 					</div>
-					<a href="https://vnexpress.net/bao-noru-do-bo-4516535.html">Bão Noru 2022</a>
-					<p>Hàng nghìn nhà tốc mái, lưới điện tê liệt sau bão Noru</p>
+					<a href=" ../php_Eshop_3/index.php?option=post&id=fitfood-hop-tac-cung-star-kombucha-ra-mat-combo-an-sach-song-khoe" style="text-align: center;">Tầm quan trọng của sức khỏe</a>
+				
 				</div>
 				<!-- /banner -->
 
 				<!-- banner -->
 				<div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
 					<div class="banner banner-1" >
-						<img src="https://benhviennhitrunguong.gov.vn/wp-content/uploads/2016/03/A%CC%89nh-chu%CC%A3p-Ma%CC%80n-hi%CC%80nh-2021-07-14-lu%CC%81c-5.33.57-CH.png" alt="">
+						<img src="../php_Eshop_3/public/img/post/fitfood-hop-tac-cung-star-kombucha-ra-mat-combo-an-sach-song-khoe.jpg	" alt="">
 						
 					</div>
-					<a href="Phòng và điều trị cảm cúm khi thời tiết giao mùa">Cảm cúm khi giao mùa</a>
-					<p>Hàng nghìn nhà tốc mái, lưới điện tê liệt sau bão Noru</p>
+					<a href="../http://localhost/php_Eshop_3/index.php?option=post&id=fitfood-hop-tac-cung-star-kombucha-ra-mat-combo-an-sach-song-khoe" style="text-align: center;">FITFOOD HỢP TÁC CÙNG STAR KOMBUCHA RA MẮT COMBO ĂN SẠCH SỐNG KHỎE</a>
+					
 				</div>
 				<!-- /banner -->
 
@@ -71,7 +71,7 @@ $list_product_sale=$product->product_list(1);
 	</div>
 	<!-- /section -->
 
-	
+
 
 	<!-- section -->
 	<div class="section">
