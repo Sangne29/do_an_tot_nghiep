@@ -308,6 +308,7 @@ CREATE TABLE `latnt_product` (
   `catid` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
+  `qr_code` varchar(255) NOT NULL,
   `img` varchar(100) NOT NULL,
   `detail` longtext NOT NULL,
   `number` int(11) UNSIGNED NOT NULL,

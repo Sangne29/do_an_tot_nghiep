@@ -21,12 +21,20 @@ if(isset($_POST['THEM']))
 	//upload file
 	if($product->product_exits_slug($slug)==true)
 			{
+				$slug2 = $slug;
 			$file_name=$_FILES['img']['name'];
 			$nameimg=$slug.'.'.get_duoi($file_name);
 			$file_tmp=$_FILES['img']['tmp_name'];
 			move_uploaded_file($file_tmp, '../public/img/'.$nameimg);
 			$data['img']=$nameimg;
-			//print_r($data);
+
+			$file_name2=$_FILES['qr_code']['name'];
+			$nameimg2=$slug2.'.'.get_duoi($file_name2);
+			$file_tmp2=$_FILES['img']['tmp_name'];
+			move_uploaded_file($file_tmp2, '../public/img/'.$nameimg2);
+			$data['qr_code']=$nameimg2;
+
+			// print_r($data);
 			$product->product_insert($data);
 			set_flash('thongbao',' Lưu thành công');
 
@@ -35,7 +43,7 @@ if(isset($_POST['THEM']))
 	{
 		set_flash('thongbao',' Tên đã tồn tại');
 	}
-		redirect('index.php?option=product');	
+		// redirect('index.php?option=product');	
 }
 
 //close  'THEM'

@@ -90,7 +90,8 @@ $list_other=$product->product_orther($list_catid,$row['id'],4);
 							</div>
 							<p><strong>Availability:</strong> In Stock</p>
 								<div class="product-view float-right">
-									<img style="width: 25%;height: 25%;" src="https://play-lh.googleusercontent.com/tIxdynCTrcKUhGZJt1vQ26DvEf8SDt70BtFA43Y8Ln--d0vaqCM6qq-uHFROcKvwZEEx" alt="">
+								
+									<img style="width: 25%;height: 25%;" src="public/img/<?php echo $row['qr_code'];?>" alt="">
 							</div>
 							<div class="product-options">	
 							</div>
@@ -115,7 +116,7 @@ $list_other=$product->product_orther($list_catid,$row['id'],4);
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
 								<li><a data-toggle="tab" href="#tab1">Details</a></li>
-								<li><a data-toggle="tab" href="#tab2">Reviews (3)</a></li>
+								<li><a data-toggle="tab" href="#tab2">Reviews (<?php echo count($review_by_product);?>)</a></li>
 							</ul>
 							<div class="tab-content">
 								<div id="tab1" class="tab-pane fade in active">
@@ -156,7 +157,7 @@ $list_other=$product->product_orther($list_catid,$row['id'],4);
 														$cnt = $cnt + 1 ;
 													}
 												}else {
-													echo "0 Review";
+													// echo "0 Review";
 												}
 											?>
 

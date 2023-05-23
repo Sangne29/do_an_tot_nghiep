@@ -58,6 +58,10 @@ foreach ($list_cat as $cat) {
 						<table> Keyword SEO</table>
 						<textarea name="metakey" class="form-control" rows="2" required></textarea>
 					</fieldset>
+					<fieldset class="form-group" >
+						<table>QR Code</table>
+						<input type="file" name="qr_code" class="form-control" required>	
+					</fieldset>
 			</div>
 			<div class="col-md-3">
 					<fieldset class="form-group" >
