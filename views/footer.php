@@ -36,10 +36,8 @@
 						<h3 class="footer-header">My Account</h3>
 						<ul class="list-links">
 							<li><a href="#">My Account</a></li>
-							<li><a href="#">My Wishlist</a></li>
-							<li><a href="#">Compare</a></li>
-							<li><a href="#">Checkout</a></li>
-							<li><a href="#">Login</a></li>
+							<li><a href="">My Wishlist</a></li>
+			
 						</ul>
 					</div>
 				</div>
@@ -53,8 +51,6 @@
 						<h3 class="footer-header">Customer Service</h3>
 						<ul class="list-links">
 							<li><a href="#">About Us</a></li>
-							<li><a href="#">Shipping & Return</a></li>
-							<li><a href="#">Shipping Guide</a></li>
 							<li><a href="#">FAQ</a></li>
 						</ul>
 					</div>

@@ -44,7 +44,7 @@ $list_post=$post->Post_Category($row['id']);
 									<tr>
 										<th style="width:15%;">Post Image</th>
 										<th style="width:60%;">Post Title</th>
-										<th class="text-center">Create Update</th>		
+										<th class="text-center">Create Update</th>	
 									</tr>
 								</thead>
 								<tbody>

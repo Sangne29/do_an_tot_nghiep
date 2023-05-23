@@ -115,7 +115,7 @@ $list_other=$product->product_orther($list_catid,$row['id'],4);
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
 								<li><a data-toggle="tab" href="#tab1">Details</a></li>
-								<li><a data-toggle="tab" href="#tab2">Reviews (3)</a></li>
+								<li><a data-toggle="tab" href="#tab2">Reviews</a></li>
 							</ul>
 							<div class="tab-content">
 								<div id="tab1" class="tab-pane fade in active">
