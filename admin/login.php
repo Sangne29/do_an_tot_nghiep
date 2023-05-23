@@ -62,7 +62,7 @@ if(isset($_SESSION['user_id'])){redirect('index.php');}
 			<form name="from1" action="" method="post">
 				<fieldset class="form-group">
 					<label >User Name</label>
-					<input type="text" class="form-control" name="username" placeholder="Enter Username Or Email">
+					<input type="text" class="form-control" name="username" placeholder="Enter Username">
 					<?php if(isset($error_username)){	echo "<span class='text-danger'>".$error_username."</span>";} ?>
 				</fieldset>
 				<fieldset class="form-group">

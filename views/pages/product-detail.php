@@ -116,7 +116,11 @@ $list_other=$product->product_orther($list_catid,$row['id'],4);
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
 								<li><a data-toggle="tab" href="#tab1">Details</a></li>
+<<<<<<< HEAD
 								<li><a data-toggle="tab" href="#tab2">Reviews (<?php echo count($review_by_product);?>)</a></li>
+=======
+								<li><a data-toggle="tab" href="#tab2">Reviews</a></li>
+>>>>>>> f95726298f1d046a726164b47e51db322fa13fed
 							</ul>
 							<div class="tab-content">
 								<div id="tab1" class="tab-pane fade in active">

@@ -31,7 +31,7 @@ require_once 'views/header.php';
 											<div class="modal-body">
 												<input type="text" name="id" value='<?php echo $id; ?>' style='display:none;'>
 												<input type="text" class="form-control" id="name" name="name" placeholder="Name:">
-												<input type="text"  class="form-control mt-3" id="timework" name="timework" placeholder="Time Work:">
+												<input type="datetime-local"  class="form-control mt-3" id="timework" name="timework" placeholder="Time Work:">
 											</div>
 											<div class="modal-footer">
 												<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
