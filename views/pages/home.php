@@ -23,54 +23,9 @@ $list_product_sale=$product->product_list(1);
 <?php require_once('views/modules/slider.php');  ?>
 <div>
 
+<img src="../DO_AN_TOT_NGHIEP/public/img/4691679dada473fa2ab5.jpg" alt="" style="width: 100%">
 
-
-<!-- section -->
-	<div class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<!-- banner -->
-				<div class="col-md-4 col-sm-6">
-					<div class="banner banner-1" >
-						<img src="../php_Eshop_3/public/img/post/fitfood-vn-hop-tac-cung-h-h-nutrition-ra-mat-goi-tu-van-dinh-duong-chuyen-sau.jpg" alt="">
-						
-					</div>
-					<a href="../php_Eshop_3/index.php?option=post&id=fitfood-vn-hop-tac-cung-h-h-nutrition-ra-mat-goi-tu-van-dinh-duong-chuyen-sau" style="text-align: center;">FITFOOD VN HỢP TÁC CÙNG H&H NUTRITION RA MẮT GÓI TƯ VẤN DINH DƯỠNG CHUYÊN SÂU.</a>
-			
-				</div>
-				<!-- /banner -->
-
-				<!-- banner -->
-				<div class="col-md-4 col-sm-6">
-					<div class="banner banner-1" >
-						<img src="../php_Eshop_3/public/img/post/tam-quan-trong-cua-suc-khoe.jpg" alt="">
-						
-					</div>
-					<a href=" ../php_Eshop_3/index.php?option=post&id=fitfood-hop-tac-cung-star-kombucha-ra-mat-combo-an-sach-song-khoe" style="text-align: center;">Tầm quan trọng của sức khỏe</a>
-				
-				</div>
-				<!-- /banner -->
-
-				<!-- banner -->
-				<div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
-					<div class="banner banner-1" >
-						<img src="../php_Eshop_3/public/img/post/fitfood-hop-tac-cung-star-kombucha-ra-mat-combo-an-sach-song-khoe.jpg	" alt="">
-						
-					</div>
-					<a href="../http://localhost/php_Eshop_3/index.php?option=post&id=fitfood-hop-tac-cung-star-kombucha-ra-mat-combo-an-sach-song-khoe" style="text-align: center;">FITFOOD HỢP TÁC CÙNG STAR KOMBUCHA RA MẮT COMBO ĂN SẠCH SỐNG KHỎE</a>
-					
-				</div>
-				<!-- /banner -->
-
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /section -->
-
+<!--
 
 
 	<!-- section -->

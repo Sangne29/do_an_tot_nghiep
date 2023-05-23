@@ -27,10 +27,10 @@
         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item active">
-        <a class="nav-link" href="index.php?option=feedback">Tư vấn<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php?option=feedback">Advise<span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item active">
-        <a class="nav-link" href="index.php?option=work">Xem lịch làm việc<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php?option=work">Calendar<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

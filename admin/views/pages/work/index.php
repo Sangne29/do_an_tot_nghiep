@@ -11,7 +11,7 @@ require_once 'views/header.php';
 		<div class="card">
 			<div class="card-header">
 				<div class="row">
-					<div class="col-md-6"><strong class="text-danger">Xem lịch làm việc</strong></div>
+					<div class="col-md-6"><strong class="text-danger">Calendar</strong></div>
 					<div class="col-md-6 text-right">
 						<?php if ($_SESSION['Access']!=1) {
 							echo "Bạn k có quyền sửa";
